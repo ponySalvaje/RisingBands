@@ -9,6 +9,6 @@ import pe.edu.upc.marcelo.models.entity.Musicstudio;
 @Repository
 public interface IMusicstudioDAO extends JpaRepository<Musicstudio, Long> {
 	
-	@Query("select m from Musicstudio m")
+	@Query("select m from Musicstudio m left join fetch m.studiorooms s where m.id=?1")
 	public Musicstudio fetchByIdWithStudiorooms(Long id);
 }
