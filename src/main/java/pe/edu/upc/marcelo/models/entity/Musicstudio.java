@@ -39,7 +39,7 @@ public class Musicstudio implements Serializable {
 	private Musicstudioowner musicstudioowner;
 	
 	@OneToMany(mappedBy="musicstudio", fetch=FetchType.LAZY, cascade=CascadeType.ALL)
-	private List<StudioRoom> studiorooms;
+	private List<Studioroom> studiorooms;
 
 	//Access methods
 	
@@ -83,15 +83,15 @@ public class Musicstudio implements Serializable {
 		this.musicstudioowner = musicstudioowner;
 	}
 
-	public List<StudioRoom> getStudiorooms() {
+	public List<Studioroom> getStudiorooms() {
 		return studiorooms;
 	}
 
-	public void setStudiorooms(List<StudioRoom> studiorooms) {
+	public void setStudiorooms(List<Studioroom> studiorooms) {
 		this.studiorooms = studiorooms;
 	}
 	
-	public void addStudioroom(StudioRoom studioroom) {
+	public void addStudioroom(Studioroom studioroom) {
 		this.studiorooms.add(studioroom);
 	}
 }

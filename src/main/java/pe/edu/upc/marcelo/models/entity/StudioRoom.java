@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name="studiorooms")
-public class StudioRoom implements Serializable {
+public class Studioroom implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	

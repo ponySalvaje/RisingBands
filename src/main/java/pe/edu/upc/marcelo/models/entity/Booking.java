@@ -43,7 +43,7 @@ public class Booking implements Serializable {
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="studioroom_id")
-	private StudioRoom studioroom;
+	private Studioroom studioroom;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="band_id")
@@ -91,11 +91,11 @@ public class Booking implements Serializable {
 		this.endhour = endhour;
 	}
 
-	public StudioRoom getStudioroom() {
+	public Studioroom getStudioroom() {
 		return studioroom;
 	}
 
-	public void setStudioroom(StudioRoom studioroom) {
+	public void setStudioroom(Studioroom studioroom) {
 		this.studioroom = studioroom;
 	}
 
